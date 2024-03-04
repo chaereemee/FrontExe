@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배경 범위 정하기</title>
+    <style>
+        .desc {
+            border: 5px dotted #222;
+            background-color: #ffd9a0;
+            width: 350px;
+            padding: 20px;
+            margin-right: 20px;
+            float: left;
+        }
+        #clip-border {
+            background-clip: border-box; /* 기본값 */
+        }
+        #clip-padding {
+            background-clip: padding-box;
+        }
+        #clip-content {
+            background-clip: content-box;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="desc" id="clip-border">
+            <h1>블루베리</h1>
+            <p>블루베리 어쩌구</p>
+            <p>블루베리 저쩌구</p>
+        </div>
+        <div class="desc" id="clip-padding">
+            <h1>블루베리</h1>
+            <p>블루베리 어쩌구</p>
+            <p>블루베리 저쩌구</p>
+        </div>
+        <div class="desc" id="clip-content">
+            <h1>블루베리</h1>
+            <p>블루베리 어쩌구</p>
+            <p>블루베리 저쩌구</p>
+        </div>
+    </div>
+</body>
+</html>
