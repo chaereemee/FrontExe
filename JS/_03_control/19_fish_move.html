@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>물고기 키보드 사용하여 움직이기</title>
+    <style>
+        #panel {
+            width: 500px;
+            height: 500px;
+            border: 3px solid #999;
+            position: relative;
+        }
+
+        #fish {
+            position: absolute;
+            left: 50px;
+            top: 200px;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const fish = document.getElementById('fish');
+            // 물고기 위치 초기값
+            let x = 50;
+            let y = 200;
+            document.addEventListener('keydown', function (e) {
+                console.log('입력 키 코드: ' + e.keyCode);
+                switch (e.keyCode) {
+                    case 37:
+                        x -= 10;
+                        fish.style.left = x + 'px';
+                        break;
+                    case 39:
+                        x += 10;
+                        fish.style.left = x + 'px';
+                        break;
+                    case 38:
+                        y -= 10;
+                        fish.style.top = y + 'px';
+                        break;
+                    case 40:
+                        y += 10;
+                        fish.style.top = y + 'px';
+                        break;
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="panel">
+        <image src="../../images2/fish.png" id="fish"></image>
+    </div>
+</body>
+
+</html>
