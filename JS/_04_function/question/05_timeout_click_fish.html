@@ -1,0 +1,49 @@
+<!-- 
+물고기를 상자에 띄우고
+물고기를 5초안에 최대한 클릭할 것
+클릭한 횟수가 상자위에 출력될 것
+5초가 지나면 더 이상 클릭횟수 증가하지 않음. 
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #panel {
+            width: 500px;
+            height: 500px;
+            border: 3px solid #999;
+            position: relative;
+        }
+
+        #fish {
+            position: absolute;
+            left: 190px;
+            top: 200px;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            let fish = document.querySelector('#fish');
+            let count = 0;
+
+            fish.addEventListener('click', () => {
+                count++;
+                setTimeout(() => {
+                    alert(`클릭 횟수 : ${count}`);
+                }, 5000);
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="panel">
+        <img src="../../../images2/fish.png" id="fish">
+    </div>
+</body>
+
+</html>
