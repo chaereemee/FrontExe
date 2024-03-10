@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        
+        // 함수 선언 4) 화ㄹ표 함수, 람다식
+        let div = (num0, num1) => (num0/num1);
+
+        // 객체 방식 5)
+        let remainder = new Function('num0', 'num1', 'return num0 % num1');
+
+        console
+        console.log(div(100, 3));
+        console.log(remainder(100, 3));
+
+        // 익명 함수 즉시 호출 (주로 매개변수로 함수를 전달하느 ㄴㅊ)
+        (function(num0, num1) {
+            let result = 1;
+            for(let i=0; i<num1; i++)
+                result *= num0;
+            console.log(result);
+        })(1000, 20);
+
+        console.log(((num0, num1) => (num0/num1))(1000, 20));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
